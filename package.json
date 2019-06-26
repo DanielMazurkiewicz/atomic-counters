@@ -1,0 +1,31 @@
+{
+  "name": "atomic-counters",
+  "version": "0.0.1",
+  "description": "Atomic counters",
+  "main": "src/JS/index.js",
+  "gypfile": true,
+  "dependencies": {},
+  "scripts": {
+    "buildDebug": "node-gyp build --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMazurkiewicz/atomic-counters.git"
+  },
+  "keywords": [
+    "atomic",
+    "counter",
+    "database",
+    "nodejs",
+    "node",
+    "napi",
+    "n-api",
+    "db"
+  ],
+  "author": "Daniel Mazurkiewicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielMazurkiewicz/atomic-counters/issues"
+  },
+  "homepage": "https://github.com/DanielMazurkiewicz/atomic-counters#readme"
+}
