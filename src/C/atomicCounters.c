@@ -159,6 +159,11 @@ function(current) {
     n_getArrayBufferPointer(atomicCounter, args[0], status);
 
     U64 value = *((U64*)(atomicCounter->context->data + atomicCounter->counterOffset));
+    if (!value) {
+        n_setUndefined(result, status);
+        return result;
+    }
+    value--;
     n_newU64(result, value);
     return result;
 }
