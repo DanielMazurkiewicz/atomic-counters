@@ -37,13 +37,13 @@ CFLAGS_CC_Debug := \
 	-Os
 
 INCS_Debug := \
-	-I/home/daniel/.node-gyp/11.15.0/include/node \
-	-I/home/daniel/.node-gyp/11.15.0/src \
-	-I/home/daniel/.node-gyp/11.15.0/deps/openssl/config \
-	-I/home/daniel/.node-gyp/11.15.0/deps/openssl/openssl/include \
-	-I/home/daniel/.node-gyp/11.15.0/deps/uv/include \
-	-I/home/daniel/.node-gyp/11.15.0/deps/zlib \
-	-I/home/daniel/.node-gyp/11.15.0/deps/v8/include
+	-I/home/daniel/.cache/node-gyp/11.15.0/include/node \
+	-I/home/daniel/.cache/node-gyp/11.15.0/src \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/openssl/config \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/openssl/openssl/include \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/uv/include \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/zlib \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/v8/include
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=atomicCounters' \
@@ -77,13 +77,13 @@ CFLAGS_CC_Release := \
 	-Os
 
 INCS_Release := \
-	-I/home/daniel/.node-gyp/11.15.0/include/node \
-	-I/home/daniel/.node-gyp/11.15.0/src \
-	-I/home/daniel/.node-gyp/11.15.0/deps/openssl/config \
-	-I/home/daniel/.node-gyp/11.15.0/deps/openssl/openssl/include \
-	-I/home/daniel/.node-gyp/11.15.0/deps/uv/include \
-	-I/home/daniel/.node-gyp/11.15.0/deps/zlib \
-	-I/home/daniel/.node-gyp/11.15.0/deps/v8/include
+	-I/home/daniel/.cache/node-gyp/11.15.0/include/node \
+	-I/home/daniel/.cache/node-gyp/11.15.0/src \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/openssl/config \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/openssl/openssl/include \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/uv/include \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/zlib \
+	-I/home/daniel/.cache/node-gyp/11.15.0/deps/v8/include
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/C/atomicCounters.o

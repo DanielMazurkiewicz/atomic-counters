@@ -1,6 +1,6 @@
 {
   "name": "atomic-counters",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Atomic counters",
   "main": "src/JS/index.js",
   "gypfile": true,

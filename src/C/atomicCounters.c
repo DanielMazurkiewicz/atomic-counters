@@ -183,6 +183,23 @@ function(next) {
 
 }
 
+function(add) {
+    napi_status status;
+    var(result);
+
+    n_getArguments(args, argsCount, 2, status);
+
+    AtomicCounter* atomicCounter;
+    n_getArrayBufferPointer(atomicCounter, args[0], status);
+
+    U64 valueToAdd;
+    n_getU64(valueToAdd, args[1], status);
+
+    U64 value = atomic_fetch_add((U64*)(atomicCounter->context->data + atomicCounter->counterOffset), valueToAdd);
+    n_newU64(result, (value + valueToAdd - 1));
+    return result;
+}
+
 function(CreateObject) {
 
     napi_status status;
@@ -196,6 +213,7 @@ function(CreateObject) {
     n_objAssignFunction(obj, methodFunction, release, status);
     n_objAssignFunction(obj, methodFunction, current, status);
     n_objAssignFunction(obj, methodFunction, next, status);
+    n_objAssignFunction(obj, methodFunction, add, status);
 
     return obj;
 }
